@@ -2,7 +2,6 @@
 $link = mysql_connect('localhost', 'it58160201', 'sosr2006');
 mysql_query("SET NAME UTF8");
 mysql_select_db('it58160201', $link);
-
 // insert new todo
 if($_POST['topic'] != ""){
     $start = date('Y-m-d H:i:s');
@@ -20,7 +19,6 @@ if($_POST['topic'] != ""){
         $sql = "UPDATE todo SET status=0 WHERE id=".$id."";
     }mysql_query($sql);
 }
-
 $sql = "SELECT * FROM todo ORDER BY status, id desc";
 $result = mysql_query($sql,$link);
 $html1 = "";$html2="";$html3="<script>$(\"input\").change(function() {";
