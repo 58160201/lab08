@@ -1,7 +1,7 @@
 <?php
 $link = mysql_connect('localhost', 'it58160201', 'sosr2006');
 mysql_query("SET NAME UTF8");
-mysql_select_db('it58160021', $link);
+mysql_select_db('it58160201', $link);
 
 // insert new todo
 if($_POST['topic'] != ""){
